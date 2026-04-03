@@ -1,169 +1,213 @@
+/* ===== BASE ===== */
 body {
-margin: 0;
-font-family: 'Inter', sans-serif;
-background: #050505;
-color: white;
-overflow-x: hidden;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #050505;
+  color: white;
+  overflow-x: hidden;
 }
 
-/* LOADER */
+/* ===== LOADER ===== */
 .loader {
-position: fixed;
-width: 100%;
-height: 100%;
-background: black;
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
 .loader-text {
-color: gold;
-font-size: 40px;
-letter-spacing: 10px;
-animation: pulse 2s infinite;
+  color: gold;
+  font-size: 40px;
+  letter-spacing: 10px;
+  animation: pulse 2s infinite;
 }
 
+@keyframes pulse {
+  0% { opacity: 0.3 }
+  50% { opacity: 1 }
+  100% { opacity: 0.3 }
+}
 
-/* HEADER */
+/* ===== HEADER ===== */
 .header {
-display: flex;
-justify-content: space-between;
-padding: 25px 80px;
-position: absolute;
-width: 100%;
-z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }
 
 .header h1 {
-color: #d4af37;
-font-family: 'Playfair Display';
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
 }
 
-/* NAV */
 nav a {
-margin: 0 20px;
-color: white;
-text-decoration: none;
-position: relative;
+  margin: 0 20px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 nav a::after {
-content: "";
-position: absolute;
-width: 0;
-height: 1px;
-background: gold;
-bottom: -5px;
-left: 0;
-transition: 0.3s;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: gold;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
 }
 
 nav a:hover::after {
-width: 100%;
+  width: 100%;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
-height: 100vh;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .bg-video {
-position: absolute;
-width: 100%;
-height: 100%;
-object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
 }
 
 .overlay {
-position: absolute;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,0.75);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  z-index: -1;
 }
 
 .hero-content {
-position: relative;
-text-align: center;
+  position: relative;
+  text-align: center;
+  max-width: 700px;
 }
 
 .hero h2 {
-font-size: 80px;
-color: #d4af37;
-font-family: 'Playfair Display';
+  font-size: 80px;
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
 }
 
-/* BUTTON */
+.hero p {
+  margin-top: 20px;
+  color: #ccc;
+}
+
+/* ===== BUTTON ===== */
 .btn {
-margin-top: 20px;
-padding: 12px 40px;
-border: 1px solid gold;
-color: gold;
-background: transparent;
-cursor: pointer;
-transition: 0.3s;
+  margin-top: 25px;
+  padding: 12px 40px;
+  border: 1px solid gold;
+  color: gold;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .btn:hover {
-background: gold;
-color: black;
+  background: gold;
+  color: black;
 }
 
-/* FEATURES */
+/* ===== SECTIONS ===== */
 .features {
-padding: 120px 80px;
+  padding: 120px 80px;
 }
 
+.section-title {
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+}
+
+/* ===== CARDS ===== */
 .cards {
-display: flex;
-gap: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
-flex: 1;
-padding: 40px;
-background: rgba(255,255,255,0.02);
-border: 1px solid rgba(212,175,55,0.2);
-transition: 0.3s;
+  flex: 1;
+  min-width: 250px;
+  padding: 40px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(212,175,55,0.2);
+  transition: 0.3s;
 }
 
 .card:hover {
-border-color: gold;
-transform: translateY(-10px);
+  border-color: gold;
+  transform: translateY(-10px);
 }
 
-/* STATS */
-.stats {
-display: flex;
-justify-content: center;
-gap: 80px;
-padding: 100px;
-}
-
-.stat h3 {
-font-size: 50px;
-color: gold;
-}
-
-/* JOIN */
+/* ===== JOIN SECTION ===== */
 .join {
-text-align: center;
-padding: 150px;
+  text-align: center;
+  padding: 150px 20px;
 }
 
-/* ANIMATIONS */
+/* ===== FADE ANIMATION ===== */
 .fade-up {
-opacity: 0;
-transform: translateY(40px);
-transition: all 1s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
 }
 
 .fade-up.show {
-opacity: 1;
-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .features {
+    padding: 60px 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
 }
