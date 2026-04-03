@@ -19,13 +19,7 @@ el.classList.add('show');
 });
 });
 
-// Cursor glow
-const glow = document.querySelector(".cursor-glow");
 
-document.addEventListener("mousemove", e => {
-glow.style.left = e.clientX + "px";
-glow.style.top = e.clientY + "px";
-});
 
 // Fake player counter (later vervangen met API)
 let count = 0;
