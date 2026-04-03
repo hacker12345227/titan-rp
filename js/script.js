@@ -24,7 +24,7 @@ el.classList.add('show');
 // Fake player counter (later vervangen met API)
 let count = 0;
 setInterval(() => {
-if (count < 128) {
+if (count < 1) {
 count++;
 document.getElementById("players").innerText = count;
 }
