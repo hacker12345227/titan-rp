@@ -43,17 +43,25 @@
 <!-- HERO -->
 
 <section class="hero">
-  <video autoplay muted loop class="bg-video">
-    <source src="https://coverr.co/videos/a-road-through-the-hills-4pvck6kfn9" type="video/mp4">
+
+  <!-- BACKGROUND VIDEO -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/video.mp4" type="video/mp4">
   </video>
 
+  <!-- DARK OVERLAY -->
   <div class="overlay"></div>
 
+  <!-- CONTENT -->
   <div class="hero-content">
-    <h2 class="fade-up">Luxury Roleplay Redefined</h2>
-    <p class="fade-up">Elite. Minimal. Kwaliteit boven alles.</p>
-    <a href="#join" class="btn fade-up">Join Server</a>
+    <h2 class="fade-up">Titan Roleplay</h2>
+    <p class="fade-up">Elite FiveM Experience</p>
+
+    <button class="btn fade-up" onclick="joinServer()">
+      Join Server
+    </button>
   </div>
+
 </section>
 
 <!-- FEATURES -->
