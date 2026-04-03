@@ -1,46 +1,108 @@
 <!DOCTYPE html>
+
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Titan Roleplay</title>
+
+  <!-- CSS -->
+
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts -->
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- LOADER -->
+
+<div class="loader" id="loader">
+  <div class="loader-text">TITAN</div>
+</div>
+
+<!-- CURSOR GLOW -->
+
+<div class="cursor-glow"></div>
+
+<!-- HEADER -->
+
 <header class="header">
-  <h1>TITAN RP</h1>
+  <h1>TITAN</h1>
   <nav>
-    <a href="#">Home</a>
+    <a href="/">Home</a>
+    <a href="over-ons/">Over Ons</a>
     <a href="#features">Features</a>
     <a href="#join">Join</a>
   </nav>
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
+  <video autoplay muted loop class="bg-video">
+    <source src="https://cdn.coverr.co/videos/coverr-luxury-car-1560/1080p.mp4" type="video/mp4">
+  </video>
+
   <div class="overlay"></div>
+
   <div class="hero-content">
-    <h2>Elite Roleplay Experience</h2>
-    <p>Welkom bij de meest luxe FiveM server.</p>
-    <a href="#" class="btn">Join Now</a>
+    <h2 class="fade-up">Luxury Roleplay Redefined</h2>
+    <p class="fade-up">Elite. Minimal. Kwaliteit boven alles.</p>
+    <a href="#join" class="btn fade-up">Join Server</a>
   </div>
 </section>
+
+<!-- FEATURES -->
 
 <section id="features" class="features">
-  <h2>Waarom Titan</h2>
+  <h2 class="section-title fade-up">Exclusieve Features</h2>
+
   <div class="cards">
-    <div class="card">Realistische RP</div>
-    <div class="card">Custom Scripts</div>
-    <div class="card">Actieve Community</div>
+    <div class="card fade-up">
+      <h3>High-End RP</h3>
+      <p>Alleen serieuze spelers.</p>
+    </div>
+
+```
+<div class="card fade-up">
+  <h3>Custom Systems</h3>
+  <p>Unieke mechanics en scripts.</p>
+</div>
+
+<div class="card fade-up">
+  <h3>Elite Community</h3>
+  <p>Geen chaos, alleen kwaliteit.</p>
+</div>
+```
+
   </div>
 </section>
 
-<section id="join" class="join">
-  <h2>Join de server</h2>
-  <button onclick="joinServer()">Connect</button>
+<!-- STATS -->
+
+<section class="stats">
+  <div class="stat">
+    <h3 id="players">0</h3>
+    <p>Spelers Online</p>
+  </div>
+  <div class="stat">
+    <h3>99%</h3>
+    <p>Uptime</p>
+  </div>
 </section>
 
+<!-- JOIN -->
+
+<section id="join" class="join fade-up">
+  <h2>Start jouw verhaal</h2>
+  <button onclick="joinServer()" class="btn">Connect</button>
+</section>
+
+<!-- JS -->
+
 <script src="js/script.js"></script>
+
 </body>
 </html>
